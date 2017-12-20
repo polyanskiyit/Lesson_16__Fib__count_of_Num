@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+</head>
+
+<body>
+    <script>
+        function fib(n) {
+            var a = 0,
+                b = 1;
+            for (var i = 3; i <= n; i++) {
+                var c = a + b;
+                a = b;
+                b = c;
+            }
+            return b;
+        }
+        //                console.log(fib(23));
+
+
+        var numberFive = 0,
+            numberThree = 0;
+
+        function Increment(number) {
+            if (25 != number) {
+                console.log("+5");
+                numberFive++;
+                return Increment(number += 5);
+            } else {
+                console.log("+3");
+                numberThree++;
+                console.log("Five: " + numberFive, "Three: " + numberThree);
+                return number += 3;
+            }
+        }
+
+//                console.log(Increment(0));
+
+
+
+
+        var a = 0,
+            b = 0,
+            c = 0;
+
+        function test(n) {
+            a = a + 5;
+            if (a < n) {
+                b++;
+                return test(n);
+            } else {
+                if (a == n) {
+                    a = a + 5;
+                    b++;
+                    return;
+                }
+
+                a = a - 5 + 3;
+                c++;
+                if (a > n) {
+                    a = a - 5 + 3;
+                    b--;
+                    c++;
+                }
+
+                if (a < n) {
+                    return test(n);
+                } else {
+                    if (a == n) {
+                        console.log(b, c);
+                        return;
+                    }
+                }
+            }
+        }
+
+        test(parseInt(prompt("Set number from 3: ")));
+
+    </script>
+
+</body>
+
+</html>
